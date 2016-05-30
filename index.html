@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+    Theme: Overwatch Tracer
+    by @raidbox
+    http://overwatchthemes.tumblr.com/
+    Feel free to use this as you want, but please leave this comment so people know who created it!
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+        {block:Hidden}
+            <meta name="text:Google analytics ID" content="">
+        {/block:Hidden}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://www.dropbox.com/s/e5wpqtzwjdnlb1y/style.css?dl=1">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://www.dropbox.com/s/x4c0jp2skz5ykle/portraits.js?dl=1"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a href="/"><h1 data-text="{Title}"><span>{Title}</span></h1></a>
+                <img src="http://i.imgur.com/hut39Rb.png" class="hero">
+                <nav class="nav">
+                    <div class="navbar">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/archive">Archive</a></li>
+                            <li><a href="/about">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <article class="posts {TagsAsClasses}">
+                {block:Posts} 
+                    
+                    {block:Text}
+                        <div class="post text">
+                        {block:Title}
+                        <h3 class="heading"><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}{Body}
+                        <div class="post-footer">
+                            <a href="{Permalink}">posted on {dayofweek}</a> •
+                            {block:NoteCount}
+                                <a href="{Permalink}">{NoteCountwithlabel}</a> •
+                            {/block:NoteCount}
+                            <a href="{ReblogURL}">{ReblogButton}</a> • <span>{LikeButton}</span>
+                            {block:HasTags}
+                                <ul class="tags">
+                                    {block:Tags}
+                                        <li>
+                                            <a href="{TagURL}" class="{Tag}">#{Tag}</a>
+                                        </li>
+                                    {/block:Tags}
+                                </ul>
+                            {/block:HasTags}
+                        </div>
+                        </div>
+                    {/block:Text} 
+                    
+                    {block:Photo}
+                        <div class="post photo">
+                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        <div class="post-footer">
+                            <a href="{Permalink}">posted on {dayofweek}</a> •
+                            {block:NoteCount}
+                                <a href="{Permalink}">{NoteCountwithlabel}</a> •
+                            {/block:NoteCount}
+                            <a href="{ReblogURL}">{ReblogButton}</a> • <span>{LikeButton}</span>
+                            {block:HasTags}
+                                <ul class="tags">
+                                    {block:Tags}
+                                        <li>
+                                            <a href="{TagURL}" class="{Tag}">#{Tag}</a>
+                                        </li>
+                                    {/block:Tags}
+                                </ul>
+                            {/block:HasTags}
+                        </div>
+                        </div>
+                    {/block:Photo}
+
+                    {block:Panorama}
+                        <div class="post panorama">
+                        {LinkOpenTag}
+                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        <div class="post-footer">
+                            <a href="{Permalink}">posted on {dayofweek}</a> •
+                            {block:NoteCount}
+                                <a href="{Permalink}">{NoteCountwithlabel}</a> •
+                            {/block:NoteCount}
+                            <a href="{ReblogURL}">{ReblogButton}</a> • <span>{LikeButton}</span>
+                            {block:HasTags}
+                                <ul class="tags">
+                                    {block:Tags}
+                                        <li>
+                                            <a href="{TagURL}" class="{Tag}">#{Tag}</a>
+                                        </li>
+                                    {/block:Tags}
+                                </ul>
+                            {/block:HasTags}
+                        </div>
+                        </div>
+                    {/block:Panorama} 
+
+                    {block:Photoset}
+                        <div class="post photoset">
+                        {Photoset-500}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        <div class="post-footer">
+                            <a href="{Permalink}">posted on {dayofweek}</a> •
+                            {block:NoteCount}
+                                <a href="{Permalink}">{NoteCountwithlabel}</a> •
+                            {/block:NoteCount}
+                            <a href="{ReblogURL}">{ReblogButton}</a> • <span>{LikeButton}</span>
+                            {block:HasTags}
+                                <ul class="tags">
+                                    {block:Tags}
+                                        <li>
+                                            <a href="{TagURL}" class="{Tag}">#{Tag}</a>
+                                        </li>
+                                    {/block:Tags}
+                                </ul>
+                            {/block:HasTags}
+                        </div>
+                        </div>
+                    {/block:Photoset} 
+
+                    {block:Quote}
+                        <div class="quote">
+                        &#8220;{Quote}&#8221;
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                        </div>
+                    {/block:Quote}
+
+                    {block:Link}
+                        <div class="link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                        </div>
+                    {/block:Link}
+
+                    {block:Chat}
+                        <div class="post chat">
+                        {block:Title}
+                        <h3 class="heading"><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+                            <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                {block:Label}
+                                    <span class="label">{Label}</span>
+                                {/block:Label}
+                                {Line}
+                                </li>
+                            {/block:Lines}
+                            </ul>
+                        <div class="post-footer">
+                            <a href="{Permalink}">posted on {dayofweek}</a> •
+                            {block:NoteCount}
+                                <a href="{Permalink}">{NoteCountwithlabel}</a> •
+                            {/block:NoteCount}
+                            <a href="{ReblogURL}">{ReblogButton}</a> • <span>{LikeButton}</span>
+                            {block:HasTags}
+                                <ul class="tags">
+                                    {block:Tags}
+                                        <li>
+                                            <a href="{TagURL}" class="{Tag}">#{Tag}</a>
+                                        </li>
+                                    {/block:Tags}
+                                </ul>
+                            {/block:HasTags}
+                        </div>
+                        </div>
+                    {/block:Chat}
+
+                    {block:Video}
+                        <div class="post video">
+                        {Video-500}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        </div>
+                        <div class="post-footer">
+                            <a href="{Permalink}">posted on {dayofweek}</a> •
+                            {block:NoteCount}
+                                <a href="{Permalink}">{NoteCountwithlabel}</a> •
+                            {/block:NoteCount}
+                            <a href="{ReblogURL}">{ReblogButton}</a> • <span>{LikeButton}</span>
+                            {block:HasTags}
+                                <ul class="tags">
+                                    {block:Tags}
+                                        <li>
+                                            <a href="{TagURL}" class="{Tag}">#{Tag}</a>
+                                        </li>
+                                    {/block:Tags}
+                                </ul>
+                            {/block:HasTags}
+                        </div>
+                    {/block:Video}
+
+                    {block:Audio}
+                        <div class="audio">
+                        {AudioEmbed}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        </div>
+                {/block:Audio} 
+
+                {block:Answer}
+                <div class="answer">
+                    <img src="{AskerPortraitURL-40}">{Asker} {Question} {Answer}
+                </div>
+                {/block:Answer}
+
+                {block:PermalinkPage} 
+                    <div class="comments">
+                    <!--embed comment widget here if required top appear on permalink page-->
+                    Comments area
+                    </div>
+                    {block:PostNotes}
+                        <div class="notes">
+                        {PostNotes}
+                        </div>
+                    {/block:PostNotes}
+                {/block:PermalinkPage} 
+
+                {block:TagPage}
+                    <h2>Posts tagged "{Tag}"</h2>
+                {/block:TagPage} 
+
+                {/block:Posts}
+            </article><!--end of article-->
+
+            <p id="footer">
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}{block:NextPage}
+                    <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+            </p>
+        </div>
+    </body>
+</html>

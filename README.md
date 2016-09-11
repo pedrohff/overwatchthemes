@@ -1,5 +1,5 @@
 #Overwatch Tracer theme
-##[Demo](http://overwatchthememes.tumblr.com)
+##[Demo](http://overwatchthemes.tumblr.com)
 This is a custom theme for tumblr. As it is my first one, and I wanna get some experience with it, I'm gonna be helping people that want changes on their theme, so I wanna hear from you what could be changed/improved;
 
 
